@@ -32,9 +32,9 @@ class Scrabble {
       return score;
     }
 
-    public static void main(String[] args) {
-      Scrabble s = new Scrabble("a");
-      s.getScore();
-    }
+    // public static void main(String[] args) {
+    //   Scrabble s = new Scrabble("a");
+    //   s.getScore();
+    // }
 
 }
