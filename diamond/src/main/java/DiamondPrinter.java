@@ -3,43 +3,39 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 class DiamondPrinter {
+    ArrayList<String> diamond;
+
+    public DiamondPrinter() {
+        diamond = new ArrayList<>();
+    }
     // create char array full of spaces
-    private static char[] row(int len) {
+    private char[] row(int len) {
         char[] row = new char[len];
         Arrays.fill(row, ' ');
         return row;
     }
 
-    private static ArrayList<String> halfList(char a) {
-        ArrayList<String> halfList = new ArrayList<>();
-
+    private void halfList(char a) {
         int numRows = Character.toUpperCase(a) - 'A' + 1;
         int extSpaces = numRows - 1;
         int len = extSpaces * 2 + 1;
 
-        char[] row = row(len);
-        row[extSpaces] = 'A';
-        halfList.add(new String(row));
-
-        for(char c = 'B'; c <= a; c++) {
+        for(char c = 'A'; c <= a; c++) {
             char[] r = row(len);
-            extSpaces--;
             r[extSpaces] = c;
             r[len - extSpaces - 1] = c;
-            halfList.add(new String(r));
+            diamond.add(new String(r));
+            extSpaces--;
         }
-
-        for(int i = numRows-2; i >= 0; i--) {
-            halfList.add(halfList.get(i));
-        }
-
-        return halfList;
     }
 
 
     ArrayList<String> printToList(char a) {
-        ArrayList<String> diamond = halfList(a);
-
+        int numRows = Character.toUpperCase(a) - 'A' + 1;
+        halfList(a);
+        for(int i = numRows-2; i >= 0; i--) {
+            diamond.add(diamond.get(i));
+        }
 
         return diamond;
     }
