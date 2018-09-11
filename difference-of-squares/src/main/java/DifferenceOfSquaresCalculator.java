@@ -1,20 +1,18 @@
+import java.util.stream.IntStream;
+
 class DifferenceOfSquaresCalculator {
 
     int computeSquareOfSumTo(int input) {
-        int s = squareSum(input);
-        return s*s;
-    }
+        int sum = IntStream.rangeClosed(1, input).sum();
 
-    int squareSum(int input) {
-        if(input == 1) return 1;
-        else
-            return input + squareSum(input-1);
+        return sum * sum;
     }
 
     int computeSumOfSquaresTo(int input) {
-        if(input == 0) return 0;
-        else
-            return input * input + computeSumOfSquaresTo(input-1);
+        int sum = IntStream.rangeClosed(1, input)
+            .map(i -> i*i).sum();
+
+        return sum;
     }
 
     int computeDifferenceOfSquares(int input) {
