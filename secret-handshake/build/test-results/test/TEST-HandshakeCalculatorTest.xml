@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HandshakeCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2018-09-17T14:21:59" hostname="Maris-Air.fios-router.home" time="0.007">
+<testsuite name="HandshakeCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2018-09-18T18:22:48" hostname="Maris-Air.fios-router.home" time="0.009">
   <properties/>
-  <testcase name="testReversingASingleActionYieldsTheSameAction" classname="HandshakeCalculatorTest" time="0.002"/>
+  <testcase name="testReversingASingleActionYieldsTheSameAction" classname="HandshakeCalculatorTest" time="0.003"/>
   <testcase name="testThatInput1YieldsAWink" classname="HandshakeCalculatorTest" time="0.0"/>
   <testcase name="testReversingNoActionsYieldsNoActions" classname="HandshakeCalculatorTest" time="0.0"/>
   <testcase name="testThatInput8YieldsAJump" classname="HandshakeCalculatorTest" time="0.0"/>

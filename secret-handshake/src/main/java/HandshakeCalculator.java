@@ -16,9 +16,11 @@ class HandshakeCalculator {
     }
 
     private List<Signal> reverseList(List<Signal> list) {
-        for(int i = 0, j = list.size() - 1; i < j; i++) {
-            list.add(i, list.remove(j));
+        for(int i = 0; i < list.size()/2; i++) {
+            Signal s = list.get(i);
 
+            list.set(i, list.get(list.size() - 1 - i));
+            list.set(list.size() - 1 - i, s);
         }
         return list;
     }
